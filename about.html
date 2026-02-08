@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — The Institute of Applied Thought Leadership</title>
+  <meta name="description" content="Learn about the IATL — a UK-based organisation dedicated to turning theoretical thought leadership into practical, real-world solutions.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav-inner">
+      <a href="index.html" class="site-logo">The <span>IATL</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="expertise.html">Our Expertise</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-header">
+    <h1>Our Story</h1>
+    <p>Turning theory into practice since 2021</p>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="content-block fade-in">
+        <p>Welcome to the Institute of Applied Thought Leadership. We are a UK-based organisation dedicated to helping individuals and organisations achieve their potential through the development of effective leadership strategies.</p>
+        <p>Since our founding in 2021, we have been bringing together a team of leadership experts, educators, and practitioners who are passionate about sharing their knowledge and expertise. Our aim is to empower the next generation of leaders and make a positive impact in the world.</p>
+        <p>One of the ways we do this is by taking theoretical thought leadership and making it practical in the real world. We understand that the theories and ideas discussed in academia don't always translate easily to real-life situations. That's why we focus on applied thought leadership — taking the latest research and ideas and turning them into practical, actionable solutions that can be implemented in the real world.</p>
+        <p>To achieve this goal, we offer a range of programmes, resources, and support to help aspiring and experienced leaders alike. Whether you are just starting out in your leadership journey or are looking to take your skills to the next level, we have something to offer you.</p>
+        <p>Join us on our mission to enable the leaders of tomorrow and make a real difference in the world.</p>
+        <p style="text-align:center; margin-top: 2rem;">
+          <a href="contact.html" class="btn">Get in Touch</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-name">The Institute of Applied Thought Leadership</div>
+    <div class="footer-email"><a href="mailto:info@iatl.org.uk">info@iatl.org.uk</a></div>
+    <div class="footer-copy">&copy; 2025 The Institute of Applied Thought Leadership.</div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

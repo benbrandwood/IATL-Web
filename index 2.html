@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Institute of Applied Thought Leadership</title>
+  <meta name="description" content="Moving Thought Leadership from the theoretical to the practical. Bringing Strategy to Life.">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Replace with your actual favicon -->
+  <!-- <link rel="icon" href="images/favicon.ico"> -->
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav-inner">
+      <a href="index.html" class="site-logo">The <span>IATL</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="expertise.html">Our Expertise</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Moving Thought Leadership from the <em>theoretical</em> to the <em>practical</em></h1>
+      <p class="hero-sub">Bringing Strategy to Life</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title fade-in">Who We Are</h2>
+      <div class="content-block fade-in">
+        <p>The Institute of Applied Thought Leadership is a UK-based organisation dedicated to helping individuals and organisations achieve their potential through the development of effective leadership strategies.</p>
+        <p>We bring together a team of leadership experts, educators, and practitioners who are passionate about sharing their knowledge and expertise. Our aim is to empower the next generation of leaders and make a positive impact in the world.</p>
+        <p style="text-align:center; margin-top: 2rem;">
+          <a href="about.html" class="btn">Learn More About Us</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="section-title fade-in">Our Areas of Expertise</h2>
+      <div class="expertise-grid">
+        <div class="expertise-card fade-in">
+          <h3>Technology Delivery</h3>
+          <p>Helping organisations navigate the move from theory, to strategy and into delivery — without being caught up in methodological purity.</p>
+        </div>
+        <div class="expertise-card fade-in">
+          <h3>Retail Insights</h3>
+          <p>Strategies for success in the face of changing consumer habits — from large nationwide organisations to independent high-street businesses.</p>
+        </div>
+        <div class="expertise-card fade-in">
+          <h3>Education Research</h3>
+          <p>Advancing our understanding of education through high-quality research, practical insight, and innovative teaching approaches.</p>
+        </div>
+      </div>
+      <p style="text-align:center; margin-top: 2.5rem;" class="fade-in">
+        <a href="expertise.html" class="btn">Explore Our Expertise</a>
+      </p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-name">The Institute of Applied Thought Leadership</div>
+    <div class="footer-email"><a href="mailto:info@iatl.org.uk">info@iatl.org.uk</a></div>
+    <div class="footer-copy">&copy; 2025 The Institute of Applied Thought Leadership.</div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+    // Fade-in on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

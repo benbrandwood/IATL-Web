@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — The Institute of Applied Thought Leadership</title>
+  <meta name="description" content="Get in touch with the Institute of Applied Thought Leadership.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav-inner">
+      <a href="index.html" class="site-logo">The <span>IATL</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="expertise.html">Our Expertise</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-header">
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you</p>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-layout">
+
+        <div class="contact-info fade-in">
+          <h3>Get in Touch</h3>
+          <p>Whether you're interested in collaborating with us, learning more about our programmes, or simply want to start a conversation — drop us a line.</p>
+          <p>You can use the form or email us directly:</p>
+          <a href="mailto:info@iatl.org.uk" class="contact-email">info@iatl.org.uk</a>
+        </div>
+
+        <div class="fade-in">
+          <!--
+            CONTACT FORM — using Formsubmit.co (free, no signup required).
+            On first submission, Formsubmit will send a confirmation email to
+            info@iatl.org.uk — you must click it to activate.
+            After that, all form submissions arrive in your inbox.
+            See: https://formsubmit.co for options (captcha, redirects, etc.)
+          -->
+          <form class="contact-form" action="https://formsubmit.co/info@iatl.org.uk" method="POST">
+            <!-- Formsubmit config -->
+            <input type="hidden" name="_subject" value="New IATL website enquiry">
+            <input type="hidden" name="_captcha" value="true">
+            <input type="text" name="_honey" style="display:none">
+
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-name">The Institute of Applied Thought Leadership</div>
+    <div class="footer-email"><a href="mailto:info@iatl.org.uk">info@iatl.org.uk</a></div>
+    <div class="footer-copy">&copy; 2025 The Institute of Applied Thought Leadership.</div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

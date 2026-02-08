@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Expertise — The Institute of Applied Thought Leadership</title>
+  <meta name="description" content="Explore IATL's areas of expertise: Technology Delivery, Retail Insights, and Education Research.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav-inner">
+      <a href="index.html" class="site-logo">The <span>IATL</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="expertise.html" class="active">Our Expertise</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-header">
+    <h1>Our Areas of Expertise</h1>
+    <p>Learn more about how our team is making a positive impact</p>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="expertise-grid" style="grid-template-columns: 1fr;">
+
+        <div class="expertise-card fade-in">
+          <h3>Technology Delivery</h3>
+          <p>Technology is the underpinning of most modern organisations, both public and private, but the rate of change in what technology is available, and importantly how to deploy, leverage and own it, is huge.</p>
+          <p style="margin-top:0.8rem;">Since 2001 there has been a huge focus on agile ways of working, but in the following 20 years we still see organisations failing to properly embrace these ways of working, further complicated with huge numbers of consultants and methodologies (Scrum, SAFe, etc.) which never turn out to be the magic bullets they promise.</p>
+          <p style="margin-top:0.8rem;">We help organisations navigate the move from theory, to strategy and into delivery without being caught up in the methodological purity that many practitioners recommend.</p>
+        </div>
+
+        <div class="expertise-card fade-in">
+          <h3>Retail Insights</h3>
+          <p>We are proud to have an expert on our team with a wealth of experience in the retail industry. This individual has not only run their own small businesses on the high street, but has also worked with larger organisations, giving them a unique perspective on the challenges and opportunities facing retailers today.</p>
+          <p style="margin-top:0.8rem;">They are well-equipped to help organisations develop strategies for success in the face of changing consumer habits and the rise of online shopping, whether through the adoption of new technologies or the development of new business models. Additionally, our expert is connected with a range of business-supporting organisations and can help organisations forge partnerships and collaborations to tap into a wider network of resources and expertise.</p>
+        </div>
+
+        <div class="expertise-card fade-in">
+          <h3>Education Research</h3>
+          <p>At the IATL, we have an expert with a diverse background in the field of education. This individual has served as a successful head teacher, non-executive director, researcher, and freelancer, giving them a unique perspective on the challenges and opportunities facing the education sector.</p>
+          <p style="margin-top:0.8rem;">One of the areas where our education expert can provide valuable insights is in research. Whether it's conducting their own research projects or collaborating with other researchers, this individual has a track record of producing high-quality work that advances our understanding of education. They can help organisations develop research agendas, identify funding opportunities, and disseminate their findings to the wider community.</p>
+          <p style="margin-top:0.8rem;">In addition to conducting research, our education expert has also been involved in the practical side of education as a head teacher and non-executive director. They have firsthand experience of the challenges facing educators and can offer valuable insights into how to address them. Whether it's developing new teaching methods, implementing new technologies, or finding ways to support struggling students, our education expert has the skills and experience to help organisations make a real difference.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-name">The Institute of Applied Thought Leadership</div>
+    <div class="footer-email"><a href="mailto:info@iatl.org.uk">info@iatl.org.uk</a></div>
+    <div class="footer-copy">&copy; 2025 The Institute of Applied Thought Leadership.</div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
