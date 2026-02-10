@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Institute of Applied Thought Leadership logo">
+  <rect width="512" height="512" fill="#ff5b5b"/>
+  <g fill="#ffffff" font-family="Arial Black, Arial, sans-serif" font-weight="700" letter-spacing="1">
+    <text x="40" y="300" font-size="44">INSTITUTE OF</text>
+    <text x="40" y="350" font-size="44">APPLIED</text>
+    <text x="40" y="400" font-size="44">THOUGHT</text>
+    <text x="40" y="450" font-size="44">LEADERSHIP</text>
+  </g>
+  <text x="472" y="492" text-anchor="end" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" letter-spacing="4">WINCHESTER — UK</text>
+</svg>
