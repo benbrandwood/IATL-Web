@@ -19,7 +19,11 @@ document.querySelectorAll('.current-year').forEach(el => {
 });
 
 // Dynamic active nav link — matches the current page filename
-const currentFile = location.pathname.split('/').pop() || 'index.html';
+const path = location.pathname;
+let currentFile = path.split('/').pop() || 'index.html';
+if (path.includes('/blog/')) {
+  currentFile = 'blog.html';
+}
 document.querySelectorAll('.nav-links a').forEach(link => {
   const linkFile = link.getAttribute('href').split('/').pop();
   link.classList.toggle('active', linkFile === currentFile);
