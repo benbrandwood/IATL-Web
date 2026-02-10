@@ -24,7 +24,7 @@
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="expertise.html" class="active">Our Expertise</a></li>
+        <li><a href="expertise.html">Our Expertise</a></li>
         <li><a href="team.html">Team</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -39,7 +39,7 @@
 
   <section class="section">
     <div class="container">
-      <div class="expertise-grid" style="grid-template-columns: 1fr;">
+      <div class="expertise-grid expertise-grid--single">
 
         <div class="expertise-card fade-in">
           <h3>Technology Delivery</h3>
@@ -71,18 +71,7 @@
     <div class="footer-copy">&copy; <span class="current-year"></span> The Institute of Applied Thought Leadership.</div>
   </footer>
 
-  <script>
-    document.querySelector('.nav-toggle').addEventListener('click', function() {
-      document.querySelector('.nav-links').classList.toggle('open');
-    });
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-    }, { threshold: 0.15 });
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-  
-    const yearEls = document.querySelectorAll('.current-year');
-    yearEls.forEach(el => { el.textContent = new Date().getFullYear(); });
-  </script>
+  <script src="js/script.js"></script>
 
 </body>
 </html>

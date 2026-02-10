@@ -26,7 +26,7 @@
         <li><a href="../about.html">About</a></li>
         <li><a href="../expertise.html">Our Expertise</a></li>
         <li><a href="../team.html">Team</a></li>
-        <li><a href="../blog.html" class="active">Blog</a></li>
+        <li><a href="../blog.html">Blog</a></li>
         <li><a href="../contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -34,7 +34,7 @@
 
   <section class="section">
     <div class="container">
-      <div class="blog-post">
+      <div class="blog-post fade-in">
         <a href="../blog.html" class="blog-back">&larr; All posts</a>
         <h1>Expert insights for real-world solutions: Welcome to the Institute of Applied Thought Leadership</h1>
         <div class="blog-meta">Ben Brandwood &middot; 30 December 2022</div>
@@ -61,14 +61,7 @@
     <div class="footer-copy">&copy; <span class="current-year"></span> The Institute of Applied Thought Leadership.</div>
   </footer>
 
-  <script>
-    document.querySelector('.nav-toggle').addEventListener('click', function() {
-      document.querySelector('.nav-links').classList.toggle('open');
-    });
-  
-    const yearEls = document.querySelectorAll('.current-year');
-    yearEls.forEach(el => { el.textContent = new Date().getFullYear(); });
-  </script>
+  <script src="../js/script.js"></script>
 
 </body>
 </html>
