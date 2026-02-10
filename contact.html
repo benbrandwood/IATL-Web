@@ -85,7 +85,7 @@
   <footer class="site-footer">
     <div class="footer-name">The Institute of Applied Thought Leadership</div>
     <div class="footer-email"><a href="mailto:info@iatl.org.uk">info@iatl.org.uk</a></div>
-    <div class="footer-copy">&copy; 2025 The Institute of Applied Thought Leadership.</div>
+    <div class="footer-copy">&copy; <span class="current-year"></span> The Institute of Applied Thought Leadership.</div>
   </footer>
 
   <script>
@@ -96,6 +96,9 @@
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
     }, { threshold: 0.15 });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  
+    const yearEls = document.querySelectorAll('.current-year');
+    yearEls.forEach(el => { el.textContent = new Date().getFullYear(); });
   </script>
 
 </body>
