@@ -22,7 +22,7 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="expertise.html">Our Expertise</a></li>
         <li><a href="team.html">Team</a></li>
@@ -81,20 +81,7 @@
     <div class="footer-copy">&copy; <span class="current-year"></span> The Institute of Applied Thought Leadership.</div>
   </footer>
 
-  <script>
-    // Mobile nav toggle
-    document.querySelector('.nav-toggle').addEventListener('click', function() {
-      document.querySelector('.nav-links').classList.toggle('open');
-    });
-    // Fade-in on scroll
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-    }, { threshold: 0.15 });
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-  
-    const yearEls = document.querySelectorAll('.current-year');
-    yearEls.forEach(el => { el.textContent = new Date().getFullYear(); });
-  </script>
+  <script src="js/script.js"></script>
 
 </body>
 </html>

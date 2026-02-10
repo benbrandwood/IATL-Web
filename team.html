@@ -25,7 +25,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="expertise.html">Our Expertise</a></li>
-        <li><a href="team.html" class="active">Team</a></li>
+        <li><a href="team.html">Team</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -43,7 +43,7 @@
 
         <!-- ====== TEAM MEMBER: Dr Heather Walker ====== -->
         <div class="team-card fade-in">
-          <div class="team-card-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="team-card-header" aria-expanded="false">
             <div class="team-avatar">
               <img src="images/Profiles/HeatherProfile.jpg" alt="Dr Heather Walker">
             </div>
@@ -63,7 +63,7 @@
 
         <!-- ====== TEAM MEMBER: Ben Brandwood ====== -->
         <div class="team-card fade-in">
-          <div class="team-card-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="team-card-header" aria-expanded="false">
             <div class="team-avatar">
               <img src="images/Profiles/BenProfile.png" alt="Ben Brandwood">
             </div>
@@ -87,7 +87,7 @@
 
         <!-- ====== TEAM MEMBER: Dr Kate Weikert ====== -->
         <div class="team-card fade-in">
-          <div class="team-card-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="team-card-header" aria-expanded="false">
             <div class="team-avatar">
               <img src="images/Profiles/KateProfile.jpeg" alt="Dr Kate Weikert">
             </div>
@@ -110,7 +110,7 @@
 
         <!-- ====== TEAM MEMBER: Cat Brandwood ====== -->
         <div class="team-card fade-in">
-          <div class="team-card-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="team-card-header" aria-expanded="false">
             <div class="team-avatar">
               <img src="images/Profiles/CatProfile.JPEG" alt="Cat Brandwood">
             </div>
@@ -133,7 +133,7 @@
 
         <!-- ====== TEAM MEMBER: Jo Sutcliffe ====== -->
         <div class="team-card fade-in">
-          <div class="team-card-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="team-card-header" aria-expanded="false">
             <div class="team-avatar">
               <img src="images/Profiles/JoPro.jpg" alt="Jo Sutcliffe">
             </div>
@@ -156,7 +156,7 @@
 
         <!-- ====== TEAM MEMBER: Ruth Luzmore ====== -->
         <div class="team-card fade-in">
-          <div class="team-card-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="team-card-header" aria-expanded="false">
             <div class="team-avatar">
               <img src="images/Profiles/RuthProfile.jpg" alt="Ruth Luzmore">
             </div>
@@ -179,7 +179,7 @@
 
         <!-- ====== TO ADD A NEW TEAM MEMBER: Copy from here ======
         <div class="team-card fade-in">
-          <div class="team-card-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="team-card-header" aria-expanded="false">
             <div class="team-avatar">XX</div>
             <div class="team-card-info">
               <h3>Full Name</h3>
@@ -209,18 +209,7 @@
     <div class="footer-copy">&copy; <span class="current-year"></span> The Institute of Applied Thought Leadership.</div>
   </footer>
 
-  <script>
-    document.querySelector('.nav-toggle').addEventListener('click', function() {
-      document.querySelector('.nav-links').classList.toggle('open');
-    });
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-    }, { threshold: 0.15 });
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-  
-    const yearEls = document.querySelectorAll('.current-year');
-    yearEls.forEach(el => { el.textContent = new Date().getFullYear(); });
-  </script>
+  <script src="js/script.js"></script>
 
 </body>
 </html>
